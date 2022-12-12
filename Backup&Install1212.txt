@@ -1,0 +1,19 @@
+<백업>
+
+(백업하려는 환경 먼저 activate 하기)
+
+pip freeze (여기서 나타난 목록을 파일로 저장하려면 > redirection사용하기)
+
+pip freeze > requirements.txt (requirements.txt라는 파일에 목록 저장됨)
+
+notepad .\requirements.txt (requirements.txt 파일이 잘 만들어졌는지 보기)
+
+deactivate
+
+(새로운 가상환경 만들기)
+
+python -m venv .\.venv\Python_Friday
+
+.\.venv\Python_Friday\Scripts\activate
+
+pip install -r requirements.txt (여기있는 소프트웨어 목록들을 설치해줌)
