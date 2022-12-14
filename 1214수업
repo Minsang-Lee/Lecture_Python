@@ -1,0 +1,815 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "9881acad-ca2f-4a63-a97e-85698652623b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "eb878a23-0ea6-427d-938b-ff437e6fd74d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.8812908992306927"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "h = (-7/10)*np.log2(7/10)+(-3/10)*np.log2(3/10)\n",
+    "h"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "b4a83fa9-ea08-47fb-9de0-a8a96ecb1f20",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "re1 = (6/10)*(-6/6)*np.log2(6/6)\n",
+    "re2 = (4/10)*((-3/4)*np.log2(3/4) + (-1/4)*np.log2(1/4))\n",
+    "re3 = re1 + re2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "54159a33-be0b-4440-9f9b-1fff139df669",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.32451124978365314"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "re3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "cd226817-c107-454b-90de-4a4aa2fb72ac",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ig = h - re3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "25d96b3c-3bcc-40ca-bc24-557c28da1b52",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.5567796494470396"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "4bf28468-84c8-4b85-acc3-679dc74797c8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.2"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "re4 = (2/10)*(1)\n",
+    "re4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "a0e17516-d1ac-4334-801b-2b19f6e17d3f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.6812908992306927"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ig2 = h - re4\n",
+    "ig2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "88cf434a-9dd1-468f-8734-7ebc2f10a5c7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.9709505944546686"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c2 = (-6/10)*np.log2(6/10) + (-4/10)*np.log2(4/10)\n",
+    "c2  # 클래스가 2개"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "7114c2ef-29ff-4823-800a-25dbe97ee408",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.5734376729639402"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "igr1 = ig / c2\n",
+    "igr1     # ig ratio"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "278675b1-7cae-4c82-8743-b83787aa0171",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c9 = ((-1/10)*np.log2(1/10))*8 + (-2/10)*np.log2(2/10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "1eb16567-f7dc-4977-ae76-43179c5dd428",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.1219280948873624"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c9  # 클래스가 9개"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "63d79fdd-e3ba-45da-a16f-cbf925888b6f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "igr2 = ig2 / c9"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "8117276d-fde7-4818-935b-0a311dd89da5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.21822760759493834"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "igr2 # ig ratio2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f1330249-fe34-422d-a693-e43240d22d03",
+   "metadata": {},
+   "source": [
+    "##  IGR 구하기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 96,
+   "id": "0cd41910-d7d7-409b-bcd1-1f8fe555ad9b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "h1 = (-3/7)*np.log2(3/7) + ((-2/7)*np.log2(2/7)) * 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 97,
+   "id": "7bab259b-aa78-43db-bf03-454617181f6b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.5566567074628228"
+      ]
+     },
+     "execution_count": 97,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "h1   #vegetation entropy"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "id": "2a92a0c2-0463-429f-9f5a-ea6142e748b5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#stream\n",
+    "stream_en = (4/7) *((-2/4)*np.log2(2/4) + (-1/4)*np.log2(1/4)+ (-1/4)*np.log2(1/4)) + (3/7) *((-2/3)*np.log2(2/3) + (-1/3)*np.log2(1/3))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "id": "54d865c7-6f61-41ad-adc4-5e7519c96ce6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.2506982145947811"
+      ]
+     },
+     "execution_count": 76,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stream_en"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 78,
+   "id": "2f69dcba-39bc-41e1-ad98-5948b9aa47fd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stream_ig = h1 - stream_en"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "id": "c75e50f1-2483-4bdd-bc0e-6e50b2ec0048",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.30595849286804166"
+      ]
+     },
+     "execution_count": 79,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stream_ig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "id": "bebcb4bb-2586-43a8-af06-e7a554c092b5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "st1_en = (-4/7)*np.log2(4/7) + (-3/7)*np.log2(3/7)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 109,
+   "id": "b7174e77-f5c0-4115-91c5-375f9bd4bdf9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.310545833678267"
+      ]
+     },
+     "execution_count": 109,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "igr_str = stream_ig / st1_en\n",
+    "igr_str  #stream igr"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "id": "65305beb-5047-4038-a9ea-6b692184d5cd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# SLOPE\n",
+    "slope_wen = (5/7) * ((-3/5)*np.log2(3/5) + ((-1/5)*np.log2(1/5) * 2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "id": "7cdde130-0474-4fc2-ba07-5c9b26bc9d27",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.9792504246104776"
+      ]
+     },
+     "execution_count": 84,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "slope_wen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "id": "987c03ee-d886-4870-bd83-b77b37c17846",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.5774062828523452"
+      ]
+     },
+     "execution_count": 85,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "slope_ig = h1 -slope_wen\n",
+    "slope_ig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "id": "2002cdd1-2c37-45db-a88d-ede9e48433c8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "slope_en = (-5/7)*np.log2(5/7) + ((-1/7)*np.log2(1/7)*2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "id": "fb799b5d-aff3-46f0-9545-f9bc0529f6ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.1488348542809166"
+      ]
+     },
+     "execution_count": 87,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "slope_en"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "id": "17f9ca37-e458-456c-bccc-9b297c0d03ea",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.5026016408718359"
+      ]
+     },
+     "execution_count": 110,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "slope_igr = slope_ig / slope_en\n",
+    "slope_igr  # slope igr"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 102,
+   "id": "43c44579-641f-4e25-9e31-7e357ff20aa3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.6792696431662097"
+      ]
+     },
+     "execution_count": 102,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#elevation\n",
+    "ele_wen = (3/7) * ((-2/3)*np.log2(2/3) + (-1/3)*np.log2(1/3)) + (2/7) * ((-1/2)*np.log2(1/2) + (-1/2)*np.log2(1/2))\n",
+    "ele_wen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "id": "5b17600e-86da-4787-9e8a-1f71c009bb86",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.8773870642966131"
+      ]
+     },
+     "execution_count": 103,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ele_ig = h1 - ele_wen\n",
+    "ele_ig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 107,
+   "id": "565fc69c-219f-4368-84ba-145c80beaf99",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.8423709931771088"
+      ]
+     },
+     "execution_count": 107,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ele_en = (-3/7)*np.log2(3/7) + (-2/7)*np.log2(2/7) + (-1/7)*np.log2(1/7) + (-1/7)*np.log2(1/7)\n",
+    "ele_en"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "id": "ba982ec8-59de-46c4-8197-478f8da7664e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.476227137501545"
+      ]
+     },
+     "execution_count": 111,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ele_igr = ele_ig / ele_en\n",
+    "ele_igr  # elevation igr"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1e9078d5-d2b5-497e-a71c-aabde6e04019",
+   "metadata": {},
+   "source": [
+    "## 2차 분개"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 129,
+   "id": "ad502433-b17c-47f5-8de9-8e20c67fb6fb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.3709505944546687"
+      ]
+     },
+     "execution_count": 129,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "h2 = (-3/5)*np.log2(3/5) + (-1/5)*np.log2(1/5) + (-1/5)*np.log2(1/5) \n",
+    "h2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "id": "4afc1f34-d933-48d4-9646-e0dc962b1e7e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.9509775004326936"
+      ]
+     },
+     "execution_count": 130,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stream_wen = ((3/5)*((-1/3)*np.log2(1/3) * 3 )) + (2/5) * (-2/2)*np.log2(2/2)\n",
+    "stream_wen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "id": "8c8cf1b6-7faa-4eb2-8c94-9b3f107503e3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.9709505944546686"
+      ]
+     },
+     "execution_count": 131,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stream_en = (-3/5)*np.log2(3/5) + (-2/5)*np.log2(2/5)\n",
+    "stream_en"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 132,
+   "id": "5923c2b3-3cc5-42a8-a280-c391817da9ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.41997309402197514"
+      ]
+     },
+     "execution_count": 132,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stream_ig = h2 - stream_wen\n",
+    "stream_ig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 133,
+   "id": "d114185b-f608-4e0d-9c9c-2e928e54fba2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.4325380677663128"
+      ]
+     },
+     "execution_count": 133,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stream_igr = stream_ig / stream_en\n",
+    "stream_igr  #stream igr"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 134,
+   "id": "fbf2849a-2953-419e-a402-c22ac7d0fa80",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.4"
+      ]
+     },
+     "execution_count": 134,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ele_wen = (2/5)*(-2/2)*np.log2(2/2) + (2/5)*((-1/2)*np.log2(1/2) + (-1/2)*np.log2(1/2))\n",
+    "ele_wen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 138,
+   "id": "90664fc3-ab0c-4f79-bf70-21498bab03fd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.5219280948873621"
+      ]
+     },
+     "execution_count": 138,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ele_en = (-2/5)*np.log2(2/5) + (-2/5)*np.log2(2/5) + (-1/5)*np.log2(1/5) \n",
+    "ele_en"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "id": "c592d891-dd3e-471b-9702-f1caf42b6f74",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.9709505944546687"
+      ]
+     },
+     "execution_count": 139,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ele_ig = h2 - ele_wen\n",
+    "ele_ig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "id": "fd36b6ae-b5cb-4ef5-bf2e-599929253301",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.6379740263133317"
+      ]
+     },
+     "execution_count": 141,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ele_igr = ele_ig / ele_en\n",
+    "ele_igr  # elevation igr"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7d645625-5973-468d-bc11-667eaaf2ca43",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
